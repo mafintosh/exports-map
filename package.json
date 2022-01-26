@@ -1,0 +1,24 @@
+{
+  "name": "node-export-map",
+  "version": "0.0.0",
+  "description": "Userland module that implements the module path mapping that Node.js does with \"exports\" in package.json",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "brittle": "^2.0.3",
+    "standard": "^16.0.4"
+  },
+  "scripts": {
+    "test": "standard && brittle test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/node-export-map.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/node-export-map/issues"
+  },
+  "homepage": "https://github.com/mafintosh/node-export-map"
+}
