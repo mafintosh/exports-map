@@ -1,4 +1,4 @@
-module.exports = function exportMap (m, runtimes, req) {
+module.exports = function exportsMap (m, runtimes, req) {
   if (!req) req = '.'
   if (!m) return req
 

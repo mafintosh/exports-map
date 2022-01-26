@@ -1,21 +1,21 @@
-# node-export-map
+# exports-map
 
 Userland module that implements the module path mapping that Node.js does with "exports" in package.json
 
 ```
-npm install node-export-map
+npm install exports-map
 ```
 
 ## Usage
 
 ``` js
-const nem = require('node-export-map')
+const em = require('exports-map')
 
 // Specify the runtimes you support
 const runtimes = new Set(['import'])
 
 // Get an export map somewhere, this one is from preact
-const exportMap = {
+const exportsMap = {
   ".": {
     "browser": "./dist/preact.module.js",
     "umd": "./dist/preact.umd.js",
@@ -32,13 +32,13 @@ const exportMap = {
 
 // And map a path
 
-const main = nem(exportMap, runtimes, '.')
+const main = em(exportsMap, runtimes, '.')
 console.log(main) // prints ./dist/preact.mjs
 
-const compact = nem(exportMap, runtimes, './compat')
+const compact = em(exportsMap, runtimes, './compat')
 console.log(compact) // prints ./compat/dist/compat.mjs
 
-const unknown = nem(exportMap, runtimes, './foobarbaz')
+const unknown = em(exportsMap, runtimes, './foobarbaz')
 console.log(unknown) // is null
 ```
 
