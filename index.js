@@ -34,9 +34,14 @@ module.exports = function exportsMap (m, runtimes, req) {
 }
 
 function condExports (val, runtimes) {
-  if (typeof val === 'string') return val
-  if (val === null || typeof val !== 'object') return val
+  while (true) {
+    if (typeof val === 'string') return val
+    if (val === null || typeof val !== 'object') return val
+    val = firstMatch(val, runtimes)
+  }
+}
 
+function firstMatch (val, runtimes) {
   const ks = Object.keys(val)
 
   for (let i = 0; i < ks.length; i++) {
