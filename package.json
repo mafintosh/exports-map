@@ -1,6 +1,6 @@
 {
   "name": "exports-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Userland module that implements the module path mapping that Node.js does with \"exports\" in package.json",
   "main": "index.js",
   "dependencies": {},
